@@ -1,0 +1,7 @@
+[user]
+	name = Will Abele
+	email = will@willabele.com
+
+[alias]
+    st = status
+    ci = commit
