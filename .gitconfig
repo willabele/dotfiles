@@ -7,3 +7,4 @@
     ci = commit
     amend = commit -a --amend --no-edit
     back = reset --hard HEAD~1
+    co = checkout
