@@ -29,6 +29,10 @@ Plugin 'Shougo/neocomplete.vim'
 Plugin 'vim-scripts/OmniCppComplete'
 Plugin 'chriskempson/base16-vim'
 Plugin 'fatih/vim-go'
+Plugin 'saltstack/salt-vim'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'triglav/vim-visual-increment'
 
 nmap <Leader><Leader>t :TagbarToggle<CR>
 "" plugin from http://vim-scripts.org/vim/scripts.html
@@ -350,7 +354,7 @@ function! s:my_cr_function()
   "return pumvisible() ? neocomplete#close_popup() : "\<CR>"
 endfunction
 " <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+"inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 " <C-h>, <BS>: close popup and delete backword char.
 inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
@@ -421,3 +425,11 @@ set guioptions=
 
 nnoremap / /\v
 cnoremap %s/ %s/\v
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
