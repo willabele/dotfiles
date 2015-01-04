@@ -56,6 +56,8 @@ brew cask install radiant-player
 
 brew install wget
 
+brew install ag
+
 # Seil for remapping caps lock to escape
 # open System Preferences > Keyboard > Modifier Keys... and change caps lock 
 # configuration to No Action.
