@@ -8,6 +8,7 @@ source $DOTFILES/z/z.sh
 alias u="cd .."
 alias vib="vim ~/.bashrc"
 alias sob="source ~/.bashrc"
+alias cap="xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'"
 
 mc() {
     mkdir -p $1
