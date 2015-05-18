@@ -113,6 +113,9 @@ bindsym $mod+Shift+0 move container to workspace 10
 bindsym F7 exec amixer -q set Master 2%+ unmute
 bindsym F6 exec amixer -q set Master 2%- unmute
 bindsym F5 exec amixer -q set Master toggle
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 2%+ unmute || amixer -q set PCM 2%+ unmute
+bindsym XF86AudioLowerVolume exec amixer -q set Master 2%- unmute || amixer -q set PCM 2%- unmute
+bindsym XF86AudioMute exec amixer -q set Master toggle || amixer -q set PCM toggle
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
