@@ -5,10 +5,6 @@ DOTFILES=`pwd`
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
-ln -s $DOTFILES/.bashrc $HOME/
-ln -s $DOTFILES/.bash_profile $HOME/
-ln -s $DOTFILES/.gitconfig $HOME/
-
 # Install Homebrew
 if [ ! `which brew` ]
 then
@@ -28,17 +24,6 @@ brew install mercurial
 
 # Macvim with lua support
 brew install macvim --with-cscope --with-lua --override-system-vim
-
-# Vim config
-ln -s $DOTFILES/.vimrc $HOME/.vimrc
-if [ ! -e $HOME/.vim/bundle/Vundle.vim ]
-then
-	mkdir -p $HOME/.vim/bundle
-	git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-fi
-
-vim +PluginInstall +qall
-vim +GoInstallBinaries +qall
 
 # Cask for installing OS X apps
 brew install caskroom/cask/brew-cask
@@ -64,9 +49,3 @@ brew install ag
 brew cask install seil
 
 brew install python
-pip install git+git://github.com/Lokaltog/powerline
-
-if [ ! -e z ]
-then
-    git clone https://github.com/rupa/z.git
-fi
