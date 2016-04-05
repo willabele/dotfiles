@@ -9,7 +9,7 @@ export GOPATH=$HOME/projects/go
 export PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] '
 
 source $HOME/etc/z/z.sh
-alias config="git --git-dir=$DOTFILES --work-tree=$HOME"
+alias c="git --git-dir=$DOTFILES --work-tree=$HOME"
 alias u="cd .."
 alias vib="vim ~/.bashrc"
 alias sob="source ~/.bashrc"
