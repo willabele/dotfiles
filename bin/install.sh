@@ -43,6 +43,8 @@ brew install wget
 
 brew install ag
 
+brew install ctags
+
 # Seil for remapping caps lock to escape
 # open System Preferences > Keyboard > Modifier Keys... and change caps lock 
 # configuration to No Action.
