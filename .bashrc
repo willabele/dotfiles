@@ -27,7 +27,9 @@ alias u="cd .."
 alias vib="vim ~/.bashrc"
 alias sob="source ~/.bashrc"
 alias cap="xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'"
-
+alias git-tossh="git remote set-url origin `git remote -v | grep origin \
+    |tail -n 1 | egrep -E -o "github.com[^ ]+" | \
+    sed -e 's/github.com\//git\@github.com:/' | sed -e 's/$/.git/'`"
 mc() {
     mkdir -p $1
     cd $1
