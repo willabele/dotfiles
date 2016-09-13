@@ -2,11 +2,24 @@
 if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
+
 DOTFILES=$HOME/projects/dotfiles.git
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export PATH=$HOME/bin:$PATH
 export GOPATH=$HOME/projects/go
-export PS1='\[\e[0;32m\]\u\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] '
+if [[ -e ~/.friendlyname ]]
+then
+    export HOSTNAME=`cat .friendlyname`
+else
+    if uname -a | grep Darwin
+    then
+        export HOSTNAME=`scutil --get ComputerName`
+    else
+        export HOSTNAME=`hostname`
+    fi
+fi
+
+export PS1='\[\e[0;32m\]${HOSTNAME}\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] '
 
 source $HOME/etc/z/z.sh
 alias c="git --git-dir=$DOTFILES --work-tree=$HOME"
