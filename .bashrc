@@ -3,7 +3,7 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-DOTFILES=$HOME/projects/dotfiles.git
+DOTFILES=$HOME/.dotfiles
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export PATH=$HOME/bin:$PATH
 export GOPATH=$HOME/projects/go
