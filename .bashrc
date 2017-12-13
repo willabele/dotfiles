@@ -4,14 +4,12 @@ if [ -f /etc/bashrc ]; then
 fi
 
 DOTFILES=$HOME/.dotfiles
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export PATH=$HOME/bin:$PATH
-export GOPATH=$HOME/projects/go
 if [[ -e ~/.friendlyname ]]
 then
     export HOSTNAME=`cat .friendlyname`
 else
-    if uname -a | grep Darwin
+    if uname -a | grep Darwin > /dev/null 2>&1
     then
         export HOSTNAME=`scutil --get ComputerName`
     else
@@ -26,6 +24,11 @@ alias u="cd .."
 alias vib="vim ~/.bashrc"
 alias sob="source ~/.bashrc"
 alias cap="xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'"
+alias vim="mvim -v"
+
+n() {
+    vim ~/od/notes/$1
+}
 mc() {
     mkdir -p $1
     cd $1

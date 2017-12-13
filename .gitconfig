@@ -1,6 +1,6 @@
 [user]
 	name = Will Abele
-	email = will@willabele.com
+	email = will.abele@starlab.io
 
 [alias]
     st = status
@@ -8,3 +8,5 @@
     amend = commit -a --amend --no-edit
     back = reset --hard HEAD~1
     co = checkout
+[color]
+	ui = auto
