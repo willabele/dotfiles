@@ -25,6 +25,7 @@ alias vib="vim ~/.bashrc"
 alias sob="source ~/.bashrc"
 alias cap="xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'"
 alias vim="mvim -v"
+alias waketime='pmset -g log |grep "Kernel Idle sleep preventers: IODisplayWrangler" |tail -n10'
 
 n() {
     vim ~/od/notes/$1
