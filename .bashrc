@@ -17,6 +17,7 @@ else
     fi
 fi
 
+export EDITOR=vim
 export PS1='\[\e[0;32m\]${HOSTNAME}\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] '
 source $HOME/etc/z/z.sh
 alias c="GIT_AUTHOR_EMAIL='will@willabele.com' GIT_AUTHOR_NAME='Will Abele' git --git-dir=$DOTFILES --work-tree=$HOME"
@@ -24,7 +25,6 @@ alias u="cd .."
 alias vib="vim ~/.bashrc"
 alias sob="source ~/.bashrc"
 alias cap="xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'"
-alias vim="mvim -v"
 alias waketime='pmset -g log |grep "Kernel Idle sleep preventers: IODisplayWrangler" |tail -n10'
 
 n() {
