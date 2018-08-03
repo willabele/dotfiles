@@ -30,6 +30,7 @@ export EDITOR=vim
 export PS1='\[\e[0;32m\]${HOSTNAME}\[\e[m\] \[\e[1;34m\]\w\[\e[m\] \[\e[1;32m\]\$\[\e[m\] '
 source $HOME/etc/z/z.sh
 alias c="GIT_AUTHOR_EMAIL='will@willabele.com' GIT_AUTHOR_NAME='Will Abele' git --git-dir=$DOTFILES --work-tree=$HOME"
+alias pgit="GIT_AUTHOR_EMAIL='will@willabele.com' GIT_AUTHOR_NAME='Will Abele' git"
 alias u="cd .."
 alias vib="vim ~/.bashrc"
 alias sob="source ~/.bashrc"
