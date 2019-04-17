@@ -8,9 +8,9 @@ then
     if [[ $1 == "-g" ]]
     then
         CONTAINER=`get_container.py $2`
+        shift
+        shift
     fi
-    shift
-    shift
 fi
 
 # Ensure we've got what we need for SSH_AUTH_SOCK
