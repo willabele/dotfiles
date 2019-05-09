@@ -1,0 +1,8 @@
+#!/bin/bash
+killall synergys
+synergys -c ~/syn.conf
+ssh willmbp << END
+killall synergyc
+ssh -f db -L 24800:127.0.0.1:24800 -N
+/Applications/Synergy.app/Contents/MacOS/synergyc -1 localhost
+END
