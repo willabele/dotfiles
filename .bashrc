@@ -4,7 +4,7 @@ if [ -f /etc/bashrc ]; then
 fi
 
 DOTFILES=$HOME/.dotfiles
-export PATH=$HOME/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/bin:$PATH
 if [[ -e ~/.friendlyname ]]
 then
     export HOSTNAME=`cat .friendlyname`
@@ -114,4 +114,20 @@ mc() {
     cd $1
 }
 
+install_nvim_ubuntu() {
+    sudo apt-get install python-dev python-pip python3-dev python3-pip
+    sudo add-apt-repository ppa:neovim-ppa/stable
+    sudo apt-get update
+    sudo apt-get install neovim
+    sudo apt install python-neovim
+    sudo apt install python3-neovim
+}
+
+install_docker_ubuntu() {
+    sudo apt-get install curl
+    curl -fsSL https://get.docker.com | sh
+    sudo usermod -aG docker $(id -n -u)
+}
+
+source ${HOME}/.config/extras/*.sh
 shopt -s dotglob
