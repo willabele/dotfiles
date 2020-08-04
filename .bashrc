@@ -131,3 +131,6 @@ install_docker_ubuntu() {
 
 source ${HOME}/.config/extras/*.sh
 shopt -s dotglob
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/"
+alias base16='eval "$($BASE16_SHELL/profile_helper.sh)"'
