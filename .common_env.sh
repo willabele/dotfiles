@@ -83,3 +83,6 @@ mc() {
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/"
 alias base16='eval "$($BASE16_SHELL/profile_helper.sh)"'
+
+export CRUCIBLE_LINUX_REFERENCE=${HOME}/projects/linux
+alias yocto_containerize="docker run --rm -it -v ${HOME}:${HOME} crops/poky --workdir=$(pwd)"
