@@ -86,3 +86,4 @@ alias base16='eval "$($BASE16_SHELL/profile_helper.sh)"'
 
 export CRUCIBLE_LINUX_REFERENCE=${HOME}/projects/linux
 alias yocto_containerize="docker run --rm -it -v ${HOME}:${HOME} crops/poky --workdir=$(pwd)"
+export PATH=$HOME/.local/bin:$HOME/bin:$PATH:/usr/local/go/bin

@@ -55,3 +55,6 @@ install_docker_ubuntu() {
 source ${HOME}/.config/extras/*.sh
 source ${HOME}/.common_env.sh
 shopt -s dotglob
+export GOPATH=~/projects/go
+GO111MODULE="on"
+export PATH=${PATH}:${GOPATH}/bin
