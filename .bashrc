@@ -52,7 +52,9 @@ install_docker_ubuntu() {
     sudo usermod -aG docker $(id -n -u)
 }
 
-source ${HOME}/.config/extras/*.sh
+if compgen -G "${HOME}/.config/extras/*.sh"; then
+    source ${HOME}/.config/extras/*.sh
+fi
 source ${HOME}/.common_env.sh
 shopt -s dotglob
 export GOPATH=~/projects/go
