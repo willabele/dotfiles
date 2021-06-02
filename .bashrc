@@ -52,7 +52,7 @@ install_docker_ubuntu() {
     sudo usermod -aG docker $(id -n -u)
 }
 
-if compgen -G "${HOME}/.config/extras/*.sh"; then
+if compgen -G "${HOME}/.config/extras/*.sh" > /dev/null; then
     source ${HOME}/.config/extras/*.sh
 fi
 source ${HOME}/.common_env.sh
